@@ -8,7 +8,7 @@
     "update": "node update.js",
     "deploy": "node deploy.js",
     "dev": "node server.js",
-    "real": "node server.js ./site/"
+    "real": "node server.js docs/"
   },
   "author": "Frank",
   "license": "MIT",

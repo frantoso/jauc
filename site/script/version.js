@@ -1,1 +1,0 @@
-"use strict";const version="1.1.1.8";

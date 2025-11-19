@@ -12,7 +12,7 @@ const fsUnlink = util.promisify(fs.unlink)
 const exec = util.promisify(require('child_process').exec)
 const fsMkdir = util.promisify(fs.mkdir)
 
-const OUT_DIR = './site/'
+const OUT_DIR = './docs/'
 const VERSION_FILE = 'version.json'
 
 const projectFiles = [
