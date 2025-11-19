@@ -2,23 +2,23 @@
   "name": "Just Another Unit Converter",
   "short_name": "Jauc",
   "icons": [{
-        "src": "images/jaucicon-128.png",
+        "src": "/jauc/images/jaucicon-128.png",
         "type": "image/png",
         "sizes": "128x128"
       }, {
-        "src": "images/jaucicon-152.png",
+        "src": "/jauc/images/jaucicon-152.png",
         "type": "image/png",
         "sizes": "152x152"
       }, {
-        "src": "images/jaucicon-144.png",
+        "src": "/jauc/images/jaucicon-144.png",
         "type": "image/png",
         "sizes": "144x144"
       }, {
-        "src": "images/jaucicon-192.png",
+        "src": "/jauc/images/jaucicon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       }, {
-        "src": "images/jaucicon-512.png",
+        "src": "/jauc/images/jaucicon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }],
