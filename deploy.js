@@ -269,17 +269,17 @@ async function minifyToDeployDir () {
   await minifyHtmlFiles()
 }
 
-async function areOpenCommits () {
-  const out = (await exec('git status --porcelain')).stdout
-  return !!out
-}
+// async function areOpenCommits () {
+//   const out = (await exec('git status --porcelain')).stdout
+//   return !!out
+// }
 
 async function deploy () {
-  if (await areOpenCommits()) {
-    console.log('Please checkin all files first.')
-    console.log('Aborting ...')
-    return
-  }
+  // if (await areOpenCommits()) {
+  //   console.log('Please checkin all files first.')
+  //   console.log('Aborting ...')
+  //   return
+  // }
 
   console.log('Deploying files...')
 
@@ -291,4 +291,4 @@ async function deploy () {
   await addVersionToFiles()
 }
 
-deploy()
+deploy().then(() => console.log('Finished'))
