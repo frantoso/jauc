@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Just another unit coverter</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="f7/css/framework7.bundle.min.css">
+<link rel="stylesheet" href="css/jauc.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#694E8D" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Jauc">
+<link rel="apple-touch-icon" href="/images/jaucicon-192.png">
+</head>
+
+<noscript>
+<h1>This page can only run when skripting is enabled.</h1>
+</noscript>
+
+<body>
+<div id="app">
+
+<!-- Your main view, should have "view-main" class -->
+<div class="view view-main" url="/">
+
+<div class="panel panel-left panel-cover panel-init">
+<div class="view panel-view">
+<div class="page-content block">
+<h2 id="panel-header">Categories</h2>
+<div class="list simple-list">
+<ul id="menuitems">
+</ul>
+<ul>
+<li>&nbsp;</li>
+<li>
+<button class="button  button-large color-black"
+style="text-align: left;text-transform: none; font-weight: normal;"
+id="menu-about" onclick="showAbout()">about</button>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Initial Page, "data-name" contains page name -->
+<div data-name="jauchome" class="page">
+
+<!-- Top Navbar -->
+<div class="navbar">
+<div class="navbar-bg"></div>
+<div class="navbar-inner">
+<div class="left">
+<a class="panel-open icon-only button" style="text-align: center;" href="#"
+data-panel=".panel-left">
+<svg class="fts-icon" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path stroke-width="0" fill="grey"
+d="M0,3 h20 v2 h-20 z M0,9 h20 v2 h-20 z M0,15 h20 v2 h-20 z" />
+</svg>
+</a>
+</div>
+<div class="title">Just Another Unit Converter</div>
+</div>
+</div>
+<div class="toolbar toolbar-bottom">
+<div class="toolbar-inner">
+<a class="link external" href="impressum.html">Impressum</a>
+</div>
+</div>
+<!-- Scrollable page content -->
+<div class="page-content">
+<div id="conversionheader" class="block-title block-title-large" style="padding-bottom: 8px;"></div>
+<div class="block medium-inset">
+<div class="row">
+<div class="col-100 medium-70">
+<div class="list no-hairlines">
+<ul style="padding-left: 4px; padding-right: 4px; ">
+<li>
+<h3 id="from-header">From</h3>
+</li>
+<li>
+<div class="item-input-wrap input-dropdown-wrap">
+<select id="from-selector" onchange="unitChanged()">
+</select>
+</div>
+</li>
+<li class="item-content item-input item-input-outline">
+<div class="item-inner">
+<div class="item-input-wrap">
+<input id="from-value" type="text" placeholder="Enter number"
+value="1" required validate
+pattern="[+-]?(([0-9,]+.?[0-9]*)|([0-9,]*.?[0-9]+))([eE][+-]?[0-9]+)?"
+data-error-message="Only numbers please!"
+oninput="fromValueChanged()">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="list no-hairlines">
+<ul style="padding-left: 4px; padding-right: 4px; ">
+<li>
+<h3 id="to-header">To</h3>
+</li>
+<li>
+<div class="item-input-wrap input-dropdown-wrap">
+<select id="to-selector" onchange="unitChanged()">
+</select>
+</div>
+</li>
+<li class="item-content item-input item-input-outline">
+<div class="item-inner">
+<div class="item-input-wrap">
+<input id="to-value" type="text" placeholder="Enter number"
+value="1" required validate
+pattern="[+-]?(([0-9,]+.?[0-9]*)|([0-9,]*.?[0-9]+))([eE][+-]?[0-9]+)?"
+data-error-message="Only numbers please!"
+oninput="toValueChanged()">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="block-footer">
+<div class="list no-hairlines-md" style="display: inline;">
+<ul style="display: inline;">
+<li class="item-content">
+<div class="item-inner " style="width: unset;">
+<div id="separator-label">Decimal separator</div>
+<div>:&nbsp;&nbsp;&nbsp;</div>
+<div class="item-input input-dropdown">
+<select id="separator-selector" onchange="separatorChanged()">
+<option id="separator-option-point" value=".">. (point)</option>
+<option id="separator-option-comma" value=",">, (comma)</option>
+</select>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker
+.register('/sw.js')
+.then(function () { console.log("Service Worker Registered"); });
+}
+</script>
+<script type="text/javascript" src="f7/js/framework7.bundle.min.js"></script>
+<script type="text/javascript" src="script/localization.js"></script>
+<script type="text/javascript" src="script/globalization.js"></script>
+<script type="text/javascript" src="script/conversions.js"></script>
+<script type="text/javascript" src="script/fomulas.js"></script>
+<script type="text/javascript" src="script/translations.js"></script>
+<script type="text/javascript" src="script/texts.js"></script>
+<script type="text/javascript" src="script/version.js"></script>
+<script type="text/javascript" src="script/program.js"></script>
+</body>
+
+</html>

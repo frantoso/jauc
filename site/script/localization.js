@@ -1,0 +1,1 @@
+"use strict";class Translator{constructor(t){this.translations=null!=t?t:[],this.activeTranslation=null,this.setTranslation()}setTranslation(){for(const t of this.translations)window.navigator.language.indexOf(t.lang)>-1&&(this.activeTranslation=t.texts)}get(t,a){return this.activeTranslation&&this.activeTranslation.has(t)?this.activeTranslation.get(t):!0===a?t:a}}
