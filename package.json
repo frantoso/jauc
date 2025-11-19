@@ -1,0 +1,27 @@
+{
+  "name": "jauc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node update.js",
+    "deploy": "node deploy.js",
+    "dev": "node server.js",
+    "real": "node server.js ./site/"
+  },
+  "author": "Frank",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "framework7": "^5.6.0"
+  },
+  "devDependencies": {
+    "cash-dom": "^7.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
