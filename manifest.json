@@ -22,7 +22,7 @@
         "type": "image/png",
         "sizes": "512x512"
       }],
-  "start_url": "/",
+  "start_url": "/jauc/index.html",
   "display": "fullscreen",
   "theme_color":"#694E8D",
   "background_color": "#B6A7CA"
