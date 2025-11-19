@@ -16,7 +16,7 @@ const textsDe = new Map([
   ['Only numbers please!', 'Bitte nur Zahlen!'],
   ['about', 'Info'],
   ['Legal info', 'Impressum'],
-  ['About FtsJauc', 'Über FtsJauc'],
+  ['About Jauc', 'Über Jauc'],
   ['Just Another Unit Converter', 'Noch ein Einheiten-Konverter'],
   ['', '']
   // ["", ""],

@@ -94,7 +94,7 @@ function loadPage (conversionName) {
 function showAbout () {
   app.panel.close('.panel-left')
   app.dialog.create({
-    title: texts.get('About FtsJauc', true),
+    title: texts.get('About Jauc', true),
     text: texts.get('Just another unit converter', true),
     content: '<div><p>Version ' +
             version +
